@@ -1,0 +1,287 @@
+.msr-slider {
+	width: 100%;
+	overflow: hidden;
+}
+
+.msr-slider__slide {
+	position: relative;
+	background-image: var(--msr-bg-pc);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: min(50vw, 800px);
+}
+
+.msr-slider__list,
+.msr-slider .slick-list,
+.msr-slider .slick-track,
+.msr-slider__slide {
+    height: min(50vw, 800px);
+}
+
+/* ========================================
+   SP
+======================================== */
+
+@media (max-width: 767px) {
+
+	.msr-slider,
+	.msr-slider__list,
+	.msr-slider .slick-list,
+	.msr-slider .slick-track {
+		height: 100dvh;
+	}
+
+	.msr-slider__slide {
+		height: 100dvh;
+		aspect-ratio: auto;
+		background-image: var(--msr-bg-sp);
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	.msr-layer {
+		left: var(--msr-sp-x) !important;
+		top: var(--msr-sp-y) !important;
+		font-size: var(--msr-sp-font-size) !important;
+	}
+
+}
+
+/* slick デザインカスタマイズ */
+/* arrow */
+.msr-prev-arrow,
+.msr-next-arrow {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: #f5f5f5;
+    border-radius: 50%;
+    transition: all .3s ease;
+    cursor: pointer;
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 99;
+}
+
+.msr-prev-arrow {
+    left: 1vw;
+}
+
+.msr-next-arrow {
+    right: 1vw;
+}
+
+.msr-prev-arrow::before,
+.msr-next-arrow::before{
+    position:absolute;
+    content: "";
+    width:10px;
+    height:10px;
+    border-right: 2px solid #666;
+    border-top: 2px solid #666;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+    transform:rotate(-135deg);
+}
+
+.msr-next-arrow::before {
+    transform:rotate(45deg);
+}
+
+/* dots */
+.msr-slider .slick-dots {
+    position: absolute;
+    bottom: 5%;
+}
+
+.msr-slider .slick-dots li button:before {
+    content: '●';
+}
+
+/* テキストレイヤー */
+.msr-slider__slide {
+	position: relative;
+}
+
+.msr-layer--text {
+	position: absolute;
+	transform: translate(-50%, -50%);
+	z-index: 1;
+	color: #333;
+	font-size: 32px;
+	font-weight: bold;
+	width: 60%;
+}
+
+/* アニメーション */
+/* fade */
+.msr-animation--fade {
+	opacity: 0;
+}
+
+.msr-animation--fade.is-animate {
+	animation: msr-fade cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes msr-fade {
+
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+
+}
+
+/* fadeUp */
+.msr-animation--fadeUp {
+	opacity: 0;
+	transform: translate(-50%, calc(-50% + 15px));
+}
+
+.msr-animation--fadeUp.is-animate {
+	animation: msr-fade-up cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes msr-fade-up {
+
+	from {
+		opacity: 0;
+		transform: translate(-50%, calc(-50% + 15px));
+	}
+
+	to {
+		opacity: 1;
+		transform: translate(-50%, -50%);
+	}
+
+}
+
+/* fadeDown */
+.msr-animation--fadeDown {
+	opacity: 0;
+	transform: translate(-50%, calc(-50% - 15px));
+}
+
+.msr-animation--fadeDown.is-animate {
+	animation: msr-fade-down cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes msr-fade-down {
+
+	from {
+		opacity: 0;
+		transform: translate(-50%, calc(-50% - 15px));
+	}
+
+	to {
+		opacity: 1;
+		transform: translate(-50%, -50%);
+	}
+
+}
+
+/* slideLeft */
+.msr-animation--slideLeft {
+	opacity: 0;
+	transform: translate(calc(-50% + 30px), -50%);
+}
+
+.msr-animation--slideLeft.is-animate {
+	animation: msr-slide-left cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes msr-slide-left {
+
+	from {
+		opacity: 0;
+		transform: translate(calc(-50% + 30px), -50%);
+	}
+
+	to {
+		opacity: 1;
+		transform: translate(-50%, -50%);
+	}
+
+}
+
+/* slideRight */
+.msr-animation--slideRight {
+	opacity: 0;
+	transform: translate(calc(-50% - 30px), -50%);
+}
+
+.msr-animation--slideRight.is-animate {
+	animation: msr-slide-right cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes msr-slide-right {
+
+	from {
+		opacity: 0;
+		transform: translate(calc(-50% - 30px), -50%);
+	}
+
+	to {
+		opacity: 1;
+		transform: translate(-50%, -50%);
+	}
+
+}
+
+/* ボタン */
+.msr-layer--button {
+	position: absolute;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	display: inline-block;
+	padding: 12px 24px;
+	background: #333;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 4px;
+	text-align: center;
+}
+
+.msr-layer--button:hover {
+	opacity: 0.8;
+}
+
+/* ========================================
+   SP
+======================================== */
+
+@media (max-width: 767px) {
+
+	.msr-layer {
+		left: var(--msr-sp-x) !important;
+		top: var(--msr-sp-y) !important;
+		font-size: var(--msr-sp-font-size) !important;
+	}
+
+}
+
+/* width指定 */
+.msr-layer {
+    width: var(--msr-width);
+}
+
+@media (max-width: 767px) {
+    .msr-layer {
+        width: var(--msr-sp-width) !important;
+    }
+}
+
+/* レイヤーカスタム用スタイル */
+.msr-fw-normal {
+	font-weight: normal !important;
+}

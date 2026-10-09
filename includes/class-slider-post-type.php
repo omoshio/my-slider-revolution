@@ -4,14 +4,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-/**
- * Slider Post Type
- */
+/* Slider Post Type */
 class MSR_Slider_Post_Type {
 
-	/**
-	 * Constructor
-	 */
+	/* Constructor */
 	public function __construct() {
 
 		add_action(
@@ -20,9 +16,7 @@ class MSR_Slider_Post_Type {
 		);
 	}
 
-	/**
-	 * Register Slider post type
-	 */
+	/* Register Slider post type */
 	public function register_post_type() {
 
 		$labels = array(
@@ -59,7 +53,5 @@ class MSR_Slider_Post_Type {
 	}
 }
 
-/**
- * Initialize
- */
+/* Initialize */
 new MSR_Slider_Post_Type();

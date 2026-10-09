@@ -1,0 +1,188 @@
+/* ========================================
+   My Slider Revolution
+   Admin CSS
+======================================== */
+
+/* ----------------------------------------
+   Slides
+---------------------------------------- */
+
+.msr-slides {
+	margin: 20px 0;
+}
+
+.msr-slides__list {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+
+/* ----------------------------------------
+   Slide
+---------------------------------------- */
+
+.msr-slide {
+	padding: 20px;
+	border: 1px solid #dcdcde;
+	border-radius: 6px;
+	background: #fff;
+}
+
+.msr-slide__title {
+	display: block;
+	margin: -20px -20px 20px;
+	padding: 12px 20px;
+	border-bottom: 1px solid #dcdcde;
+	border-radius: 6px 6px 0 0;
+	background: #f6f7f7;
+	font-size: 14px;
+}
+
+
+/* ----------------------------------------
+   Background
+---------------------------------------- */
+
+.msr-slide__background {
+	margin-bottom: 25px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #dcdcde;
+}
+
+.msr-background-preview,
+.msr-sp-background-preview {
+	margin: 10px 0 15px;
+}
+
+.msr-background-preview img,
+.msr-sp-background-preview img {
+	display: block;
+	max-width: 300px;
+	height: auto;
+	border: 1px solid #dcdcde;
+}
+
+.msr-select-background,
+.msr-remove-background {
+	margin-right: 5px !important;
+}
+
+
+/* ----------------------------------------
+   Layers
+---------------------------------------- */
+
+.msr-layers {
+	margin-top: 20px;
+}
+
+.msr-layers__list {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+
+/* ----------------------------------------
+   Layer editor
+---------------------------------------- */
+
+.msr-layer-editor {
+	padding: 18px;
+	border: 1px solid #dcdcde;
+	border-radius: 5px;
+	background: #f6f7f7;
+}
+
+.msr-layer-editor__title {
+	display: block;
+	margin-bottom: 15px;
+	font-size: 14px;
+}
+
+
+/* ----------------------------------------
+   Layer fields
+---------------------------------------- */
+
+.msr-layer-editor label {
+	display: block;
+	margin-bottom: 12px;
+}
+
+.msr-layer-editor label > input,
+.msr-layer-editor label > select {
+	display: block;
+	margin-top: 5px;
+}
+
+.msr-layer-editor .widefat {
+	max-width: 500px;
+}
+
+
+/* ----------------------------------------
+   Button layer settings
+---------------------------------------- */
+
+.msr-layer-editor__button {
+	margin: 15px 0;
+	padding: 15px;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+	background: #fff;
+}
+
+
+/* ----------------------------------------
+   Position / Animation settings
+---------------------------------------- */
+
+.msr-slide__position {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 15px;
+	margin: 15px 0;
+	padding: 15px;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+	background: #fff;
+}
+
+.msr-slide__position label {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	margin: 0;
+}
+
+.msr-slide__position input[type="number"] {
+	width: 80px;
+}
+
+
+/* ----------------------------------------
+   Buttons
+---------------------------------------- */
+
+.msr-add-layer {
+	margin-top: 15px !important;
+}
+
+.msr-remove-layer {
+	margin-top: 5px !important;
+}
+
+.msr-remove-slide {
+	margin-top: 20px !important;
+}
+
+
+/* ----------------------------------------
+   Add Slide
+---------------------------------------- */
+
+#msr-add-slide {
+	margin-top: 5px;
+}
