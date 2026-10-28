@@ -159,107 +159,16 @@ jQuery(function ($) {
 
                 </div>
 
-                <div class="msr-slide__text">
+                <div class="msr-layers">
 
-                    <label>
-                        テキスト
-                    </label>
+                    <div class="msr-layers__list"></div>
 
-                    <input
-                        type="text"
-                        name="msr_slides[${slideIndex}][text]"
-                        value=""
-                        class="widefat"
+                    <button
+                        type="button"
+                        class="button msr-add-layer"
                     >
-
-                    <div class="msr-slide__position">
-
-                        <label>
-                            X
-                            <input
-                                type="number"
-                                name="msr_slides[${slideIndex}][text_x]"
-                                value="50"
-                                min="0"
-                                max="100"
-                            >
-                            %
-                        </label>
-
-                        <label>
-                            Y
-                            <input
-                                type="number"
-                                name="msr_slides[${slideIndex}][text_y]"
-                                value="50"
-                                min="0"
-                                max="100"
-                            >
-                            %
-                        </label>
-
-                        <label>
-                            フォントサイズ
-                            <input
-                                type="number"
-                                name="msr_slides[${slideIndex}][font_size]"
-                                value="32"
-                                min="0"
-                                max="200"
-                            >
-                        px
-                        </label>
-
-                        <label>
-                            文字色
-                            <input
-                                type="color"
-                                name="msr_slides[${slideIndex}][color]"
-                                value="#333333"
-                            >
-                        </label>
-
-                        <label>
-                            アニメーション
-                            <select
-                                name="msr_slides[${slideIndex}][animation]"
-                            >
-                                <option value="none">なし</option>
-                                <option value="fade">fade</option>
-                                <option value="fadeUp">fadeUp</option>
-                                <option value="fadeDown">fadeDown</option>
-                                <option value="slideLeft">slideLeft</option>
-                                <option value="slideRight">slideRight</option>
-                            </select>
-                        </label>
-
-                        <label>
-                            Delay
-                            <input
-                                type="number"
-                                name="msr_slides[${slideIndex}][delay]"
-                                value="0"
-                                min="0"
-                                max="10000"
-                                step="100"
-                            >
-                            ms
-                        </label>
-
-                        <label>
-                            Duration
-                            <input
-                                type="number"
-                                name="msr_slides[${slideIndex}][duration]"
-                                value="800"
-                                min="100"
-                                max="5000"
-                                step="100"
-                            >
-                            ms
-                        </label>
-
-                    </div>
+                        Layerを追加
+                    </button>
 
                 </div>
 
